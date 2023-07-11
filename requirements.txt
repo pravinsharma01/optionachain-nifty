@@ -1,5 +1,6 @@
+--upgrade pip
 Flask==2.2.5
-matplotlib==3.7.2
+matplotlib==3.5.3
 requests==2.31.0
 datetime==5.1
 pandas==2.0.3
