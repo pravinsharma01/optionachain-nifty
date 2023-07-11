@@ -1,7 +1,6 @@
-Flask
-matplotlib
-requests
-datetime
-time
-pandas
-numpy
+Flask==2.3.2
+matplotlib==3.7.2
+requests==2.31.0
+datetime==5.1
+pandas==2.0.3
+
