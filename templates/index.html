@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Output</title>
+</head>
+<body>
+    <h1>Data Output:</h1>
+    
+    <h2>Data Frame 1:</h2>
+    {{ df1 | safe }}
+    
+    <h2>Data Frame 2:</h2>
+    {{ df2 | safe }}
+    
+    <h2>Data Frame 3:</h2>
+    {{ df3 | safe }}
+    
+    <script type="text/javascript">
+        setTimeout(function () {
+            location.reload();
+        }, 180000); // Refresh the page every 3 minutes (modify as needed)
+    </script>
+</body>
+</html>

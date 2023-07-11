@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Max Pain</title>
+</head>
+<span> Request Method = {{request_method}}</span>
+
+<body>
+    <form name = "maxpain" form action="/maxpain" method="get">
+        <label for "Maxpain"> Enter the value of Max Pain: </label><br>
+        <input type="number" id = "sp" name="Maxpain" value = "0" required><br>
+
+        <label for="Price_range">Enter the number of Strike Prices to calculate:</label><br>
+        <input type="number" id = "value" name="Price_range" value = "0" required><br><br>
+
+        All Data<input type = "checkbox" value = "1" name = "mycheckbox">
+	Call Data<input type = "checkbox" value = "2" name = "mycheckbox">
+	Put Data<input type = "checkbox" value = "3" name = "mycheckbox">
+        <input type="submit" value="Submit">
+	</br>
+    </form>
+
+    <h1>Data Output:</h1>
+    <h2>Data Frame 2:</h2>
+     {{ df4 | safe }}    
+    <h2>Data Frame 1:</h2>
+     {{ df1 | safe }}
+    <h2>Data Frame 2:</h2>
+     {{ df2 | safe }}
+    <h2>Data Frame 2:</h2>
+     {{ df3 | safe }}
+
+    
+    
+    <script type="text/javascript">
+        setTimeout(function () {
+            location.reload();
+        }, 180000); // Refresh the page every 3 minutes (modify as needed)
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Flask
+matplotlib
+requests
+datetime
+time
+pandas
+numpy
