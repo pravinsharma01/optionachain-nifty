@@ -6,9 +6,6 @@ import requests
 import pandas as pd
 import time
 from datetime import datetime
-from matplotlib import pyplot as plt
-import matplotlib.animation as animation
-from matplotlib import style
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for
 
