@@ -1,3 +1,3 @@
-from optionchain_new import index
+from optionchain_new import app
 
 app.run()
