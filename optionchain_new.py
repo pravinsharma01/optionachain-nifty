@@ -5,7 +5,7 @@ Option chain data by getting data from NSE and using flask for HTML display
 import requests
 import pandas as pd
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -27,10 +27,11 @@ headers = {
 
 
 # this function is for current time___________________________________________
-def currenttime():        
-    curr_time = time.localtime()
-    curr_clock = time.strftime("%H:%M:%S", curr_time)
-    return curr_clock
+def currenttime():
+    local_timezone = timedelta(hours=5, minutes=30)  # India timezone offset is UTC+5:30
+    curr_time = datetime.utcnow() + local_timezone
+    curr_time = curr_time.strftime("%H:%M:%S")
+    return curr_time
 
 #this function is to get ALL the live data from NSE_________________________________
 def GetOCdatafromwebsite(url, headers):
