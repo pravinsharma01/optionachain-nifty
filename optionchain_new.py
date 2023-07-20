@@ -4,7 +4,6 @@ Option chain data by getting data from NSE and using flask for HTML display
 """
 import requests
 import pandas as pd
-import time
 from datetime import datetime, timedelta
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for
