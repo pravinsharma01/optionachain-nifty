@@ -6,6 +6,7 @@ import requests
 import pandas as pd
 from datetime import datetime, timedelta
 import numpy as np
+import time
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
