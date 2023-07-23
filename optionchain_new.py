@@ -363,7 +363,10 @@ def index():
     Data, current_market_price = GetOCdatafromwebsite(url, headers)
     curr_clock = currenttime()
     finalOC, ceop, peop =Getdataorganised(Data)
-    df1 = finalOC
+    #df1 = finalOC
+    # adding comma in the numbers
+    df1 = finalOC.style.format({'Change in OI(CE)' : '{:,}', 'OI(CE)' : '{:,}', 'Volume(CE)': '{:,}', 'Volume(PE)': '{:,}', 'OI(PE)' : '{:,}', 'Change in OI(PE)' : '{:,}'})
+    
     df2 = ceop
     df3 = peop
     return render_template ('index.html', df1 = df1.to_html(), df2 = df2.to_html(), df3 = df3.to_html())
