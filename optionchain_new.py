@@ -397,9 +397,8 @@ def TargetedstrikepricandPCR():
         finalOC, ceop, peop =Getdataorganised(Data)
         OCforuse,allputdata, allcalldata = get_updateddata(finalOC, current_market_price, ceop, peop)
         new_df ,count = PCRcalulation(PCRD, count)
-        new_df = new_df(by = index, ascending = False)
         df1 = OCforuse
-        df2 = new_df
+        df2 = new_df.sort_index(ascending = False)
         return render_template ('TargetedstrikepricandPCR.html', df1 = df1.to_html(), df2 = df2.to_html())
 
 @app.route('/maxpain', methods = ['GET','POST'])
@@ -447,8 +446,8 @@ def maxpain():
     OIPCR = MaxpainPCRofOI(OCforuse, PCRD)
     VolumePCR = MaxpainPCRofvolume(OCforuse, PCRDV)
     Dfhv = highestvalue(finalOC)
-    df2 = OIPCR
-    df3 = VolumePCR
+    df2 = OIPCR.sort_index(ascending = False)
+    df3 = VolumePCR.sort_index(ascending = False)
     df4 = Dfhv
 
     return render_template ('maxpain.html', df1 = df1.to_html(), df2 = df2.to_html(), df3 = df3.to_html(), df4 = df4.to_html())
