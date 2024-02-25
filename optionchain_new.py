@@ -20,9 +20,9 @@ url = "https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY"
 file_path = 'H:\\Final Algo - Python\\option chain\\data_new.html'
 usename = "pravin-9558824321"
 headers = {
-    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
     "Accept-Language": "en,en-US;q=0.9,hi;q=0.8",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
     }
 
 
